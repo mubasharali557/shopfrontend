@@ -48,7 +48,7 @@ export default function AddToCart() {
     const orderData = { cart, formData, totalPrice };
 
     try {
-      const res = await fetch("http://localhost:5000/api/orders/orders", {
+      const res = await fetch("https://shopbackend-ysnr.onrender.com/api/orders/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderData),
