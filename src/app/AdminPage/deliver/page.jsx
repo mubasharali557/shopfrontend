@@ -8,7 +8,7 @@ export default function DeliverPage() {
   const fetchDeliveries = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:5000/api/delivery/");
+      const res = await fetch("https://shopbackend-ysnr.onrender.com/api/delivery/");
       const data = await res.json();
       if (res.ok) {
         setDeliveries(data);
@@ -23,7 +23,7 @@ export default function DeliverPage() {
   // ✅ Delete delivery (without confirm/alert)
   const handleRemove = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/delivery/${id}`, {
+      const res = await fetch(`https://shopbackend-ysnr.onrender.com/api/delivery/${id}`, {
         method: "DELETE",
       });
       if (res.ok) {

@@ -19,7 +19,7 @@ export default function AdminSkinCarePage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/skincare/");
+        const res = await fetch("https://shopbackend-ysnr.onrender.com/api/skincare/");
         const data = await res.json();
         setProducts(data);
       } catch (error) {

@@ -18,7 +18,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/house-products/");
+        const res = await fetch("https://shopbackend-ysnr.onrender.com/api/house-products/");
         const data = await res.json();
         setOrders(data);
       } catch (error) {
@@ -45,7 +45,7 @@ export default function DashboardPage() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/house-products/", {
+      const res = await fetch("https://shopbackend-ysnr.onrender.com/api/house-products/", {
         method: "POST",
         body: formData,
       });
@@ -72,7 +72,7 @@ export default function DashboardPage() {
   // ✅ Delete Product
   const deleteOrder = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/house-products/${id}`, {
+      const res = await fetch(`https://shopbackend-ysnr.onrender.com/api/house-products/${id}`, {
         method: "DELETE",
       });
 

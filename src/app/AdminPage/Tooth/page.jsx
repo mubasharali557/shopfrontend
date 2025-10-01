@@ -20,7 +20,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/toothbrushes/");
+        const res = await fetch("https://shopbackend-ysnr.onrender.com/api/toothbrushes/");
         const data = await res.json();
         setOrders(data);
       } catch (error) {

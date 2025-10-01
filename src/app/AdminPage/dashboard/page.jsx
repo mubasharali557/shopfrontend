@@ -20,7 +20,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/products");
+        const res = await fetch("https://shopbackend-ysnr.onrender.com/api/products");
         if (!res.ok) {
           const text = await res.text();
           console.error("Fetch error:", res.status, text);
@@ -58,7 +58,7 @@ export default function DashboardPage() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/products", {
+      const res = await fetch("https://shopbackend-ysnr.onrender.com/api/products", {
         method: "POST",
         body: formData,
       });
@@ -91,7 +91,7 @@ export default function DashboardPage() {
   // ✅ Delete product with backend confirmation
   const deleteProduct = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/products/${id}`, {
+      const res = await fetch(`https://shopbackend-ysnr.onrender.com/api/products/${id}`, {
         method: "DELETE",
       });
 

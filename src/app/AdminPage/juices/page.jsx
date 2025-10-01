@@ -20,7 +20,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/juices/");
+        const res = await fetch("https://shopbackend-ysnr.onrender.com/api/juices/");
         const data = await res.json();
         setOrders(data);
       } catch (error) {
@@ -44,7 +44,7 @@ export default function DashboardPage() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/juices/", {
+      const res = await fetch("https://shopbackend-ysnr.onrender.com/api/juices/", {
         method: "POST",
         body: formData,
       });
@@ -71,7 +71,7 @@ export default function DashboardPage() {
   // ✅ Delete Juice (API + Frontend Update)
   const deleteOrder = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/juices/${id}`, {
+      const res = await fetch(`https://shopbackend-ysnr.onrender.com/api/juices/${id}`, {
         method: "DELETE",
       });
 

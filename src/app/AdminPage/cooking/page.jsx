@@ -18,7 +18,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/cooking-oil/");
+        const res = await fetch("https://shopbackend-ysnr.onrender.com/api/cooking-oil/");
         if (!res.ok) {
           const text = await res.text();
           console.error("Fetch products error:", res.status, text);
@@ -50,7 +50,7 @@ export default function DashboardPage() {
       formData.append("status", newOrder.status);
       if (newOrder.image) formData.append("image", newOrder.image);
 
-      const res = await fetch("http://localhost:5000/api/cooking-oil/", {
+      const res = await fetch("https://shopbackend-ysnr.onrender.com/api/cooking-oil/", {
         method: "POST",
         body: formData,
       });
@@ -94,7 +94,7 @@ export default function DashboardPage() {
   // ✅ Delete order (with API)
   const deleteOrder = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/cooking-oil/${id}`, {
+      const res = await fetch(`https://shopbackend-ysnr.onrender.com/api/cooking-oil/${id}`, {
         method: "DELETE",
       });
 

@@ -16,7 +16,7 @@ export default function HomeProductsPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/home-products/");
+        const res = await fetch("https://shopbackend-ysnr.onrender.com/api/home-products/");
         if (!res.ok) {
           const txt = await res.text();
           console.error("Fetch error:", res.status, txt);
@@ -76,7 +76,7 @@ export default function HomeProductsPage() {
       const targetId = id || "68d4783e9d3b76a5e34cd058";
 
       const res = await fetch(
-        `http://localhost:5000/api/home-products/${targetId}`,
+        `https://shopbackend-ysnr.onrender.com/api/home-products/${targetId}`,
         {
           method: "DELETE",
         }

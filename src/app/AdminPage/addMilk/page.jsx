@@ -17,7 +17,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/milk-products");
+        const res = await fetch("https://shopbackend-ysnr.onrender.com/api/milk-products");
         const data = await res.json();
         setOrders(data);
       } catch (error) {
@@ -43,7 +43,7 @@ export default function DashboardPage() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/milk-products/", {
+      const res = await fetch("https://shopbackend-ysnr.onrender.com/api/milk-products/", {
         method: "POST",
         body: formData,
       });

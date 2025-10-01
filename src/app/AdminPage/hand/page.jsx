@@ -23,7 +23,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/body-washes/");
+        const res = await fetch("https://shopbackend-ysnr.onrender.com/api/body-washes/");
         const data = await res.json();
         setProducts(data);
       } catch (error) {
@@ -58,7 +58,7 @@ export default function DashboardPage() {
       formData.append("reviews", newProduct.reviews);
       formData.append("image", newProduct.image);
 
-      const res = await fetch("http://localhost:5000/api/body-washes/", {
+      const res = await fetch("https://shopbackend-ysnr.onrender.com/api/body-washes/", {
         method: "POST",
         body: formData,
       });
